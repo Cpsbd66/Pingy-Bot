@@ -1,6 +1,6 @@
 import os
 from discord import Intents, Client, utils, Status
-from keep_alive.py import keep_alive()
+from keep_alive import keep_alive
 
 Token = os.getenv("TOKEN")
 
