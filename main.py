@@ -21,7 +21,7 @@ async def on_message(message):
     return
   if str(message.guild.id) == os.getenv("SERVER") and str(
       message.channel.id) == os.getenv("CHANNEL"):
-    user = utils.get(message.guild.roles, id=1228714379881615414)
+    user = utils.get(message.guild.roles, id=1119260509347262475) # competitive programmer
     await message.channel.send(f"{user.mention}")
 
 keep_alive()
