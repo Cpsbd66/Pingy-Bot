@@ -1,5 +1,6 @@
 import os
 from discord import Intents, Client, utils, Status
+from keep_alive.py import keep_alive()
 
 Token = os.getenv("TOKEN")
 
@@ -23,4 +24,5 @@ async def on_message(message):
     user = utils.get(message.guild.roles, id=1228714379881615414)
     await message.channel.send(f"{user.mention}")
 
+keep_alive()
 client.run(Token)
