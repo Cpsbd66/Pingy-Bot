@@ -22,7 +22,7 @@ async def on_message(message):
   if str(message.guild.id) == os.getenv("SERVER") and str(
       message.channel.id) == os.getenv("CHANNEL"):
     user = utils.get(message.guild.roles, id=1119260509347262475) # competitive programmer
-    await message.channel.send(f"{user.mention}")
+    await message.channel.send(f"{user.mention}", delete_after=0)
 
 keep_alive()
 client.run(Token)
