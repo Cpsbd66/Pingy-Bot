@@ -14,7 +14,8 @@ async def on_ready():
   await client.change_presence(status=Status.do_not_disturb)
   print(f'Logged in as {client.user.name}')
 
-
+# The Code is of course correct but just commenting it, because we dont need it now
+"""
 @client.event
 async def on_message(message):
   if message.author == client.user:
@@ -23,6 +24,7 @@ async def on_message(message):
       message.channel.id) == os.getenv("CHANNEL"):
     user = utils.get(message.guild.roles, id=1119260509347262475) # competitive programmer
     await message.channel.send(f"{user.mention}", delete_after=0)
+"""
 
 keep_alive()
 client.run(Token)
